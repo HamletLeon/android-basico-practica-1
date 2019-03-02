@@ -8,8 +8,7 @@ public class Main {
             new Estudiante("Eduardo", 24),
             new Estudiante("Tomas", 25),
         };
-        int totalEstudiantes = estudiantes.length;
-        System.out.println("Total de estudiante: " + totalEstudiantes);
+        int totalEstudiantes = 0;
         int minEdad = 0;
         int maxEdad = 0;
         int avgEdad = 0;
@@ -22,8 +21,10 @@ public class Main {
             if (maxEdad < edad) maxEdad = edad;
             avgEdad += edad;
             allEstudiantes += "\n   " + estudiante.getNombre();
+            totalEstudiantes++;
         }
         if (totalEstudiantes > 0) avgEdad = avgEdad / totalEstudiantes;
+        System.out.println("Total de estudiante: " + totalEstudiantes);
         System.out.println("Edad minima: " + minEdad);
         System.out.println("Edad maxima: " + maxEdad);
         System.out.println("Edad promedio: " + avgEdad);
